@@ -1,0 +1,231 @@
+:root {
+    --white: #EBEBEB;
+    --orange: #f7803c;
+    --red: #f54828;
+    --violet: #2e0d23;
+    --white2: #ffedbf;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(247, 128, 60);
+    background: radial-gradient(circle, rgba(247, 128, 60, 1) 0%, rgba(46, 13, 35, 1) 88%);
+    width: 100%;
+    top: 0;
+    height: 10%;
+}
+
+header>h1 {
+    color: white;
+    font-weight: 300;
+}
+
+header>img {
+    height: 50px;
+    max-height: 50px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+main {
+    background-color: whitesmoke;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    display: flex;
+}
+
+#cards-container {
+    flex-basis: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    justify-content: flex-start;
+}
+
+#cart-container {
+    position: fixed;
+    left: 73%;
+    width: 23%;
+    flex-basis: 30%;
+    padding: 1rem;
+    max-height: 500px;
+}
+
+.card {
+    width: 200px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    -webkit-box-shadow: 0px 0px 10px -3px var(--violet);
+    -moz-box-shadow: 0px 0px 10px -3px var(--violet);
+    box-shadow: 0px 0px 10px -3px var(--violet);
+}
+
+.card>div:first-child {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.card>div>img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card>div>h4 {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin: 0.5rem 0;
+    color: var(--violet);
+}
+
+.card>div>h3:hover {
+    color: var(--red);
+    cursor: grab;
+}
+
+.card>div>div>h6 {
+    padding: 0;
+    margin: 0.25rem 0;
+    font-weight: 500;
+}
+
+.card>div>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.card>div>p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.card>div>h3 {
+    margin: 0.5rem 0;
+    font-size: 17px;
+    color: var(--violet);
+}
+
+.card>div>button {
+    background-color: var(--white2);
+    border: 1px solid var(--violet);
+    border-radius: 5px;
+    font-size: 13px;
+    color: var(--violet);
+    font-weight: 500;
+    padding: 0.3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.card>div>button:hover {
+    background-color: var(--violet);
+    color: white;
+}
+
+.card>div {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-title{
+    text-align: center;
+}
+
+.cart-card{
+    padding: 0.5rem 1rem;
+    -webkit-box-shadow: 0px 0px 10px -3px var(--violet);
+    -moz-box-shadow: 0px 0px 10px -3px var(--violet);
+    box-shadow: 0px 0px 10px -3px var(--violet);
+    border-radius: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.cart-card > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0.5rem 0;
+}
+
+.items-cart{
+    display: flex;
+    gap: 1rem;
+}
+
+.cart-card > div:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+.cart-card > div > div > h5{
+    margin: 0;
+}
+
+.cart-card > div > div > h6{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.cart-card > h3{
+    display: flex;
+    justify-content: end;
+}
+
+.btn-pay{
+    padding: 0.5rem;
+    font-weight: 700;
+    width: 50%;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--violet);
+    color: white;
+    display: none;
+}
+
+.btn-pay:hover{
+    background-color: var(--orange);
+    color: var(--violet);
+}
